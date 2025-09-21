@@ -19,12 +19,12 @@
 	}
 }
 {
-	// All node names must start with "n8n-nodes-"
+
 	"name": "n8n-nodes-friendgrid",
 	"version": "0.1.0",
 	"description": "n8n node to create contacts in SendGrid",
 	"keywords": [
-		// This keyword is required for community nodes
+
 		"n8n-community-node-package"
 	],
 	"license": "MIT",
@@ -35,18 +35,17 @@
 	},
 	"repository": {
 		"type": "git",
-		// Change the git remote to your own repository
-		// Add the new URL here
+
 		"url": "git+<your-repo-url>"
 	},
 	"main": "index.js",
 	"scripts": {
-		// don't change
+
 	},
 	"files": [
 		"dist"
 	],
-	// Link the credentials and node
+
 	"n8n": {
 		"n8nNodesApiVersion": 1,
 		"credentials": [
@@ -57,9 +56,9 @@
 		]
 	},
 	"devDependencies": {
-		// don't change
+
 	},
 	"peerDependencies": {
-		// don't change
+
 	}
 }

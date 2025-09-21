@@ -15,12 +15,11 @@ import {
 
 export class FriendGrid implements INodeType {
 	description: INodeTypeDescription = {
-		// Basic node details will go here
 		properties: [
-			// Resources and operations will go here
+
 		],
 	};
-	// The execute method will go here
+
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 	}
 }
@@ -128,20 +127,19 @@ credentials: [
 		},
 	],
 },
-// Handle data coming from previous nodes
+
 const items = this.getInputData();
 let responseData;
 const returnData = [];
 const resource = this.getNodeParameter('resource', 0) as string;
 const operation = this.getNodeParameter('operation', 0) as string;
 
-// For each item, make an API call to create a contact
 for (let i = 0; i < items.length; i++) {
 	if (resource === 'contact') {
 		if (operation === 'create') {
-			// Get email input
+
 			const email = this.getNodeParameter('email', i) as string;
-			// Get additional fields input
+
 			const additionalFields = this.getNodeParameter('additionalFields', i) as IDataObject;
 			const data: IDataObject = {
 				email,
@@ -149,7 +147,6 @@ for (let i = 0; i < items.length; i++) {
 
 			Object.assign(data, additionalFields);
 
-			// Make HTTP request according to https://sendgrid.com/docs/api-reference/
 			const options: OptionsWithUri = {
 				headers: {
 					'Accept': 'application/json',
@@ -168,5 +165,5 @@ for (let i = 0; i < items.length; i++) {
 		}
 	}
 }
-// Map data to n8n data structure
+
 return [this.helpers.returnJsonArray(returnData)];
