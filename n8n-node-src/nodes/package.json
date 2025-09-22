@@ -1,0 +1,18 @@
+{
+  "name": "n8n-nodes-random",
+  "version": "0.1.0",
+  "description": "n8n custom node: Random (Random.org)",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "gulp build",
+    "lint": "gulp lint"
+  },
+  "dependencies": {
+    "n8n-core": "^1.0.0",
+    "n8n-workflow": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "typescript": "^5.5.0"
+  }
+}
